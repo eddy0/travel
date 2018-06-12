@@ -241,10 +241,15 @@ body {
   .description__text {
     font-weight: 600;
     margin-bottom: 2rem; }
-  .description__list ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap; }
+  .description__list {
+    border-bottom: var(--line);
+    border-top: var(--line); }
+    .description__list ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      margin-top: 2rem; }
   .description__item {
     flex: 0 0 50%;
     padding: 0.5rem 1.5rem; }
@@ -254,10 +259,29 @@ body {
       height: 1rem;
       width: 1rem;
       margin-right: 1rem;
-      background-color: #000;
-      mask-image: url(../../../src/img/chevron-thin-right.svg);
-      -webkit-mask-image: url(../../../src/img/chevron-thin-right.svg);
+      background-color: var(--color-primary);
+      mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
       -webkit-mask-size: cover;
       mask-size: cover; }
+
+.recommend {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem; }
+  .recommend__content {
+    margin: 1rem 2rem;
+    margin-right: auto;
+    flex: 1; }
+  .recommend__friends {
+    display: flex; }
+    .recommend__friends > img {
+      height: 4rem;
+      width: auto;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-sizing: content-box; }
+      .recommend__friends > img:not(:last-child) {
+        margin-right: -1.5rem; }
 
 /*# sourceMappingURL=main.css.map */
