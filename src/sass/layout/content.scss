@@ -2,6 +2,11 @@
 
     &__gallery {
         display: flex;
+
+
+        @media (max-width: 600px) {
+            display: block;
+        }
     }
 
     &__hotel {
@@ -25,6 +30,12 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media (max-width: 600px) {
+            padding:  1.5rem 2rem;
+            font-size: 1.6rem;
+        }
+
     }
 
     &__stars {
