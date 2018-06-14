@@ -1,0 +1,10 @@
+.story__pictures {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    grid-column: full-start / col-end 5;
+}
+
+.story__content {
+    background-color: #f3f3f3;
+    grid-column: col-end 5 / full-end;
+}
