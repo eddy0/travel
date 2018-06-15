@@ -1,4 +1,86 @@
 .header {
-    background-color: lightblue;
+    background-color: $color-grey-dark-1;
     grid-column: full-start / col-end 6;
+    background-image:  linear-gradient(rgba($color-secondary, 0.93), rgba($color-secondary, 0.93)),  url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8rem;
+    padding-top: 4rem;
+
+
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(min-content, 6rem) 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    justify-content: center;
+    grid-row-gap: 2rem;
+
+    @media (max-width: $bp-md) {
+        grid-column: 1/-1;
+    }
+
+    @media (max-width: $bp-sm) {
+        padding: 5rem;
+    }
+
+
+
+
+    &__logo {
+        height: 3rem;
+        justify-self: center;
+
+
+    }
+
+    &__seenon-text {
+        text-align: center;
+        color: $color-grey-light-2;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        position: relative;
+        // margin: 0 20%;
+
+        &:before,
+        &:after {
+            content: "";
+            width: 40%;
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+            position: absolute;
+        }
+        &:before{
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+        &:after {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    }
+
+    &__btn {
+        align-self: start;
+        justify-self: start;
+    }
+
+    &__seenon-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        grid-column-gap: 3rem;
+        align-items: center;
+
+        & img {
+            max-height: 2.5rem;
+            max-width: 100%;
+            filter: brightness(80%);
+
+        }
+    }
 }
